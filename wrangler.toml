@@ -1,0 +1,4 @@
+[[d1_databases]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "DRIZZLE_TEST"
+database_id = "11185a98-445e-45b3-aa00-d30a4c963a00"

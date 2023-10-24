@@ -1,0 +1,32 @@
+{
+  "name": "cf-auth0-drizzle-sveltekit-example",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "generate": "drizzle-kit generate:sqlite",
+    "up": "drizzle-kit up:sqlite"
+  },
+  "devDependencies": {
+    "@fontsource/fira-mono": "^4.5.10",
+    "@neoconfetti/svelte": "^1.0.0",
+    "@sveltejs/adapter-cloudflare": "^2.3.3",
+    "@sveltejs/kit": "^1.27.0",
+    "@types/cookie": "^0.5.3",
+    "autoprefixer": "^10.4.16",
+    "better-sqlite3": "^9.0.0",
+    "drizzle-kit": "^0.19.13",
+    "drizzle-orm": "^0.28.6",
+    "postcss": "^8.4.31",
+    "svelte": "^4.2.2",
+    "svelte-check": "^3.5.2",
+    "tailwindcss": "^3.3.3",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
+  },
+  "type": "module"
+}
