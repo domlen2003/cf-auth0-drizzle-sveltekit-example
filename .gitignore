@@ -10,6 +10,10 @@ node_modules
 .output
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# local wrangler dev
+/.wrangler
+
 # Created by https://www.toptal.com/developers/gitignore/api/webstorm+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=webstorm+all
 

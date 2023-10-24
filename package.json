@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "vite dev",
+    "dev:wrangler": "vite build --watch & wrangler pages dev .svelte-kit/cloudflare --local --persist --live-reload",
+    "dev:build-d1": "wrangler d1 execute DRIZZLE_TEST --local --file=./drizzle/0000_hesitant_sentinels.sql",
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -17,7 +19,6 @@
     "@sveltejs/kit": "^1.27.0",
     "@types/cookie": "^0.5.3",
     "autoprefixer": "^10.4.16",
-    "better-sqlite3": "^9.0.0",
     "drizzle-kit": "^0.19.13",
     "drizzle-orm": "^0.28.6",
     "postcss": "^8.4.31",
@@ -28,5 +29,8 @@
     "typescript": "^5.2.2",
     "vite": "^4.5.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "better-sqlite3": "^9.0.0"
+  }
 }
