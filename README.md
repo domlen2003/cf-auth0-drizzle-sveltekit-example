@@ -2,17 +2,19 @@
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## Creating a project
+## Setup
 
-If you're seeing this, you've probably already done this step. Congrats!
+If developing with wrangler, you'll need to install it globally:
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+npm i -g wrangler
 ```
+
+You'll also need to run the local setup for the d1 DB:
+```bash
+npm run dev:build-d1
+```
+
 
 ## Developing
 
@@ -21,8 +23,8 @@ Once you've created a project and installed dependencies with `npm install` (or 
 ```bash
 npm run dev
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# or start the server with wrangler/cf bindings
+npm run dev:wrangler
 ```
 
 ## Building
@@ -34,5 +36,3 @@ npm run build
 ```
 
 You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
