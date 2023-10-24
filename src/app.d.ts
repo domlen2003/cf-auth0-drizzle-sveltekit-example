@@ -12,6 +12,10 @@ declare global {
         interface Platform {
             env: {
                 DB?: D1Database;
+                AUTH0_CLIENT_ID?: string;
+                AUTH0_CLIENT_SECRET?: string;
+                AUTH0_ENDPOINT?: string;
+                AUTH_SECRET?: string;
             };
         }
     }
