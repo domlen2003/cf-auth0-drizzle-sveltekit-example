@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "vite dev",
-    "dev:wrangler": "vite build --watch & wrangler pages dev .svelte-kit/cloudflare --local --persist --live-reload",
+    "dev:wrangler": "vite build --watch & wrangler pages dev .svelte-kit/cloudflare --local --live-reload",
     "dev:build-d1": "wrangler d1 execute DRIZZLE_TEST --local --file=./drizzle/0000_hesitant_sentinels.sql",
     "build": "vite build",
     "preview": "vite preview",

@@ -7,7 +7,8 @@ export const load: LayoutServerLoad = async ({locals}) => {
         return {};
     }
     let query = await locals.drizzle.select().from(users);
-    console.log("QUERY:", query);
+    console.log("QUERY:", JSON.stringify(query));
+
     if (!query || !query.length) {
         let addUser = await locals.drizzle.insert(users)
             .values({name: 'test', email: 'test@example.com'})
