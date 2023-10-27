@@ -15,7 +15,6 @@ const dbHandle: Handle = async ({event, resolve}) => {
 
 const authHandle: Handle = SvelteKitAuth(async (event) => {
     // Function syntax for being able to load secrets from CF/ENV
-    console.log(event.platform?.env.AUTH0_CLIENT_ID, event.platform?.env.AUTH0_CLIENT_SECRET)
     return {
         // TODO: do we need drizzle adapter? => https://authjs.dev/reference/adapter/drizzle
         //adapter: DrizzleAdapter(event.locals.drizzle),
@@ -23,7 +22,7 @@ const authHandle: Handle = SvelteKitAuth(async (event) => {
             Auth0Provider({
                 clientId: event.platform?.env.AUTH0_CLIENT_ID,
                 clientSecret: event.platform?.env.AUTH0_CLIENT_SECRET,
-                authorization: event.platform?.env.AUTH0_ENDPOINT
+                issuer: event.platform?.env.AUTH0_ENDPOINT,
             })
         ],
         secret: event.platform?.env.AUTH_SECRET,
